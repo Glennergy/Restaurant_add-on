@@ -38,7 +38,6 @@ function App() {
         <nav>
           <div>Tables</div>
           <div>Floor</div>
-          <div></div>
         </nav>
       </div>
       <main className="main">
