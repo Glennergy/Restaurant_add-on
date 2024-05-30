@@ -1,0 +1,100 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+.top-nav {
+  width: 100%;
+  & nav {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  max-width: 1280px;
+  min-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  justify-content: space-evenly;
+}
+@keyframes change-color {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: orange;
+  }
+  100% {
+    background-color: red;
+  }
+}
+.main-tables {
+  padding: 2rem;
+  border-radius: 25px;
+  &:hover {
+    border: 1px solid white;
+  }
+  &:active {
+    height: 120px;
+    width: 120px;
+  }
+  &__vacant {
+    @extend .main-tables;
+    height: 100px;
+    width: 100px;
+    background-color: green;
+  }
+  &__occupied {
+    @extend .main-tables;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+  }
+  &__help {
+    @extend .main-tables;
+    height: 100px;
+    width: 100px;
+    animation-name: change-color;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+}
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
